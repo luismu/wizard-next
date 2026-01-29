@@ -73,16 +73,16 @@ const SuccessDialog = ({ open, onClose, formData }: SuccessDialogProps) => {
         }
       }}
     >
-      <DialogTitle id="workspace-created-title">Workspace creado</DialogTitle>
+      <DialogTitle id="workspace-created-title">Workspace created</DialogTitle>
       <DialogContent dividers>
         <SuccessPulseIcon />
         <Typography variant="body1" gutterBottom align="center">
-          Tu workspace se creó exitosamente. Aquí tienes un resumen rápido:
+          Your workspace was created successfully. Here’s a quick summary:
         </Typography>
         <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, mt: 2 }}>
           <Box>
             <Typography variant="caption" color="text.secondary">
-              Nombre
+              Name
             </Typography>
             <Typography variant="body2">
               {formData.workspaceName || "Untitled Workspace"}
@@ -90,7 +90,7 @@ const SuccessDialog = ({ open, onClose, formData }: SuccessDialogProps) => {
           </Box>
           <Box>
             <Typography variant="caption" color="text.secondary">
-              Tipo
+              Type
             </Typography>
             <Typography variant="body2">
               {workspaceTypes.find((type) => type.value === formData.workspaceType)?.label}
@@ -104,7 +104,7 @@ const SuccessDialog = ({ open, onClose, formData }: SuccessDialogProps) => {
           </Box>
           <Box>
             <Typography variant="caption" color="text.secondary">
-              Seguridad
+              Security
             </Typography>
             <Typography variant="body2">
               {securityLevels.find((level) => level.value === formData.securityLevel)?.label}
@@ -113,7 +113,7 @@ const SuccessDialog = ({ open, onClose, formData }: SuccessDialogProps) => {
         </Box>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Cerrar</Button>
+        <Button onClick={onClose}>Close</Button>
       </DialogActions>
     </Dialog>
   );
